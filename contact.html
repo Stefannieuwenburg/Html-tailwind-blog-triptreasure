@@ -2,12 +2,20 @@
 <html lang="en">
 
 <head>
+  <script data-noptimize="1" data-cfasync="false" data-wpfc-render="false">
+    (function () {
+      var script = document.createElement("script");
+      script.async = 1;
+      script.src = 'https://emrldtp.com/NDE5NTY1.js?t=419565';
+      document.head.appendChild(script);
+    })();
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact | TripTreasure</title>
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="icon" type="image/svg+xml" href="../assets/logos/TripTreasurelogo.png" />
+  <link rel="icon" type="image/svg+xml" href="./assets/logos/TripTreasurelogo.png" />
 </head>
 
 <body class="bg-gray-50 flex flex-col min-h-screen">
@@ -16,13 +24,30 @@
   <nav class="bg-white shadow">
     <div class="container mx-auto px-4 py-3 flex items-center justify-between">
       <div class="flex items-center space-x-2">
-         <img src="../assets/logos/TripTreasurelogo.png" alt="TripTreasure Logo" class="h-24 w-24" />
+         <img src="./assets/logos/TripTreasurelogo.png" alt="TripTreasure Logo" class="h-24 w-24" />
         <span class="text-2xl font-bold text-orange-500">TripTreasure</span>
       </div>
+      <!-- Desktop Navbar Dropdown -->
       <div class="hidden md:flex space-x-8">
         <a href="index.html" class="text-orange-500 font-medium hover:underline">Home</a>
         <a href="about.html" class="text-orange-500 font-medium hover:underline">About</a>
-        <a href="blog.html" class="text-orange-500 font-medium hover:underline">Blog</a>
+        <!-- Blog links dropdown -->
+        <div class="relative group">
+          <button class="text-orange-500 font-medium hover:underline flex items-center focus:outline-none">
+            Blog links
+            <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="absolute left-0 mt-2 w-48 bg-white rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity z-20">
+            <a href="blog.html" class="block px-4 py-2 text-orange-500 hover:bg-orange-50 hover:underline">All Blogs</a>
+            <a href="travel-tips.html" class="block px-4 py-2 text-orange-500 hover:bg-orange-50 hover:underline">Travel Tips</a>
+            <a href="destinations.html" class="block px-4 py-2 text-orange-500 hover:bg-orange-50 hover:underline">Destinations</a>
+            <a href="food.html" class="block px-4 py-2 text-orange-500 hover:bg-orange-50 hover:underline">Food & Culture</a>
+            <a href="adventures.html" class="block px-4 py-2 text-orange-500 hover:bg-orange-50 hover:underline">Adventures</a>
+            <a href="guides.html" class="block px-4 py-2 text-orange-500 hover:bg-orange-50 hover:underline">Guides</a>
+          </div>
+        </div>
         <a href="contact.html" class="text-orange-500 font-medium hover:underline">Contact</a>
       </div>
       <!-- Hamburger -->
@@ -36,7 +61,23 @@
     <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 bg-white">
       <a href="index.html" class="block py-2 text-orange-500 font-medium hover:underline">Home</a>
       <a href="about.html" class="block py-2 text-orange-500 font-medium hover:underline">About</a>
-      <a href="blog.html" class="block py-2 text-orange-500 font-medium hover:underline">Blog</a>
+      <!-- Blog links dropdown for mobile -->
+      <div class="group">
+        <button onclick="this.nextElementSibling.classList.toggle('hidden')" class="w-full text-left py-2 text-orange-500 font-medium hover:underline flex items-center focus:outline-none">
+          Blog links
+          <svg class="ml-1 w-4 h-4 inline" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <div class="hidden pl-4">
+          <a href="blog.html" class="block py-2 text-orange-500 hover:bg-orange-50 hover:underline">All Blogs</a>
+          <a href="travel-tips.html" class="block py-2 text-orange-500 hover:bg-orange-50 hover:underline">Travel Tips</a>
+          <a href="destinations.html" class="block py-2 text-orange-500 hover:bg-orange-50 hover:underline">Destinations</a>
+          <a href="food.html" class="block py-2 text-orange-500 hover:bg-orange-50 hover:underline">Food & Culture</a>
+          <a href="adventures.html" class="block py-2 text-orange-500 hover:bg-orange-50 hover:underline">Adventures</a>
+          <a href="guides.html" class="block py-2 text-orange-500 hover:bg-orange-50 hover:underline">Guides</a>
+        </div>
+      </div>
       <a href="contact.html" class="block py-2 text-orange-500 font-medium hover:underline">Contact</a>
     </div>
   </nav>
@@ -44,7 +85,7 @@
   <!-- Main Content -->
   <main class="flex-1 container mx-auto px-4 py-8">
     <div class="max-w-2xl mx-auto bg-white rounded-xl shadow p-8">
-      <h1 class="text-3xl font-bold text-orange-500 mb-6 text-center">Contact Us</h1>
+      <h1 class="text-3xl font-bold text-orange-500 mb-6 text-center">Contact</h1>
       <form action="#" method="post" class="space-y-6">
         <div>
           <label class="block text-gray-700 font-medium mb-2" for="name">Name</label>

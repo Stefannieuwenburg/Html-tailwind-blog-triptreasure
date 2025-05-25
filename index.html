@@ -15,7 +15,7 @@
   <title>TripTreasure</title>
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="icon" type="image/svg+xml" href="../assets/logos/TripTreasurelogo.png" />
+  <link rel="icon" type="image/svg+xml" href="./assets/logos/TripTreasurelogo.png" />
 </head>
 
 <body class="bg-gray-50 flex flex-col min-h-screen">
@@ -24,13 +24,29 @@
   <nav class="bg-white shadow">
     <div class="container mx-auto px-4 py-3 flex items-center justify-between">
       <div class="flex items-center space-x-2">
-        <img src="../assets/logos/TripTreasurelogo.png" alt="TripTreasure Logo" class="h-24 w-24" />
+        <img src="./assets/logos/TripTreasurelogo.png" alt="TripTreasure Logo" class="h-24 w-24" />
         <span class="text-2xl font-bold text-orange-500">TripTreasure</span>
       </div>
       <div class="hidden md:flex space-x-8">
         <a href="index.html" class="text-orange-500 font-medium hover:underline">Home</a>
         <a href="about.html" class="text-orange-500 font-medium hover:underline">About</a>
-        <a href="blog.html" class="text-orange-500 font-medium hover:underline">Blog</a>
+        <!-- Blog links dropdown -->
+        <div class="relative group">
+          <button class="text-orange-500 font-medium hover:underline flex items-center focus:outline-none">
+            Blog links
+            <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="absolute left-0 mt-2 w-48 bg-white rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity z-20">
+            <a href="blog.html" class="block px-4 py-2 text-orange-500 hover:bg-orange-50 hover:underline">Blog</a>
+            <a href="travel-tips.html" class="block px-4 py-2 text-orange-500 hover:bg-orange-50 hover:underline">Travel Tips</a>
+            <a href="destinations.html" class="block px-4 py-2 text-orange-500 hover:bg-orange-50 hover:underline">Destinations</a>
+            <a href="food.html" class="block px-4 py-2 text-orange-500 hover:bg-orange-50 hover:underline">Food & Culture</a>
+            <a href="adventures.html" class="block px-4 py-2 text-orange-500 hover:bg-orange-50 hover:underline">Adventures</a>
+            <a href="guides.html" class="block px-4 py-2 text-orange-500 hover:bg-orange-50 hover:underline">Guides</a>
+          </div>
+        </div>
         <a href="contact.html" class="text-orange-500 font-medium hover:underline">Contact</a>
       </div>
       <!-- Hamburger -->
@@ -43,14 +59,29 @@
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 bg-white">
       <a href="index.html" class="block py-2 text-orange-500 font-medium hover:underline">Home</a>
-      <a href="examples.html" class="block py-2 text-orange-500 font-medium hover:underline">Voorbeeld</a>
-      <a href="page.html" class="block py-2 text-orange-500 font-medium hover:underline">Info</a>
-      <a href="another_page.html" class="block py-2 text-orange-500 font-medium hover:underline">Info 2</a>
+      <a href="about.html" class="block py-2 text-orange-500 font-medium hover:underline">About</a>
+      <!-- Blog links dropdown for mobile -->
+      <div class="group">
+        <button onclick="this.nextElementSibling.classList.toggle('hidden')" class="w-full text-left py-2 text-orange-500 font-medium hover:underline flex items-center focus:outline-none">
+          Blog links
+          <svg class="ml-1 w-4 h-4 inline" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <div class="hidden pl-4">
+          <a href="blog.html" class="block py-2 text-orange-500 hover:bg-orange-50 hover:underline">Blog</a>
+          <a href="travel-tips.html" class="block py-2 text-orange-500 hover:bg-orange-50 hover:underline">Travel Tips</a>
+          <a href="destinations.html" class="block py-2 text-orange-500 hover:bg-orange-50 hover:underline">Destinations</a>
+          <a href="food.html" class="block py-2 text-orange-500 hover:bg-orange-50 hover:underline">Food & Culture</a>
+          <a href="adventures.html" class="block py-2 text-orange-500 hover:bg-orange-50 hover:underline">Adventures</a>
+          <a href="guides.html" class="block py-2 text-orange-500 hover:bg-orange-50 hover:underline">Guides</a>
+        </div>
+      </div>
       <a href="contact.html" class="block py-2 text-orange-500 font-medium hover:underline">Contact</a>
     </div>
   </nav>
 
- <!-- Main Content -->
+  <!-- Main Content -->
   <main class="flex-1 container mx-auto px-4 py-8">
     <div class="flex flex-col lg:flex-row gap-8">
       <!-- Sidebar -->
@@ -59,24 +90,26 @@
           <h3 class="text-lg font-semibold mb-2">Latest News</h3>
           <div class="mb-4">
             <h4 class="font-bold">New Website Launched</h4>
-            <p class="text-xs text-gray-500">July 1st, 2014</p>
-            <p class="text-gray-600">2014 sees the redesign of our website. Take a look around and let us know what you think.<br><a href="#" class="text-orange-500 hover:underline">Read more</a>
+            <p class="text-xs text-gray-500 current-date"></p>
+            <p class="text-gray-600">from 2025 i have redesign this website. Take a look around and let us know what you think.<br><a href="#" class="text-orange-500 hover:underline">Read more</a>
             </p>
           </div>
           <div>
-            <h4 class="font-bold">New Website Launched</h4>
-            <p class="text-xs text-gray-500">July 1st, 2014</p>
-            <p class="text-gray-600">2014 sees the redesign of our website. Take a look around and let us know what you think.<br><a href="#" class="text-orange-500 hover:underline">Read more</a>
-            </p>
+            <h4 class="font-bold">New bonus systems Launched</h4>
+            <p class="text-xs text-gray-500 current-date"></p>
+            <p class="text-gray-600">New bonus systems on booking websites – check it out! It can give you some extra holiday bonus.
+  <br>
+  <a href="#" class="text-orange-500 hover:underline">Read more</a>
+</p>
           </div>
         </div>
         <div class="bg-white rounded-xl shadow p-6 mb-6">
-          <h3 class="text-lg font-semibold mb-2">Useful Links</h3>
+          <h3 class="text-lg font-semibold mb-2">Quick Links</h3>
           <ul class="list-disc list-inside text-gray-600">
-            <li><a href="#" class="text-orange-500 hover:underline">link 1</a></li>
-            <li><a href="#" class="text-orange-500 hover:underline">link 2</a></li>
-            <li><a href="#" class="text-orange-500 hover:underline">link 3</a></li>
-            <li><a href="#" class="text-orange-500 hover:underline">link 4</a></li>
+            <li><a href="#" class="text-orange-500 hover:underline">cheap Flichts</a></li>
+            <li><a href="#" class="text-orange-500 hover:underline">cheap Hotels</a></li>
+            <li><a href="#" class="text-orange-500 hover:underline">Car Rentals</a></li>
+            <li><a href="#" class="text-orange-500 hover:underline">Vacation Packages</a></li>
           </ul>
         </div>
         <!-- Search box styled like the sidebar -->
@@ -91,85 +124,86 @@
       <!-- Content -->
       <section class="flex-1">
         <div class="bg-white rounded-xl shadow p-8">
-          <h1 class="text-3xl font-bold text-orange-500 mb-6">Blog Page</h1>
-          
+
+
+
           <!-- Blog grid -->
           <div class="grid gap-8 grid-cols-1 md:grid-cols-2">
             <!-- Post 1 -->
-            <div class="blog-card bg-gray-50 rounded-lg shadow p-4 flex flex-col h-full">
+            <div class="blog-card rounded-lg shadow p-4 flex flex-col h-full">
               <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="Far far away, behind the word mountains" class="rounded-md mb-4 h-40 w-full object-cover">
               <div class="flex-1 flex flex-col">
-                <span class="text-xs text-gray-500 mb-1">May 14, 2020</span>
+                <p class="text-xs text-gray-500 current-date"></p>
                 <h2 class="blog-title font-bold text-lg mb-2">Far far away, behind the word mountains</h2>
                 <p class="text-gray-600 mb-4 flex-1">Vokalia and Consonantia, there live the blind texts. Separated they live.</p>
                 <a href="#" class="text-orange-500 font-semibold hover:underline mt-auto">Read More &gt;</a>
               </div>
             </div>
             <!-- Post 2 -->
-            <div class="blog-card bg-gray-50 rounded-lg shadow p-4 flex flex-col h-full">
+            <div class="blog-card rounded-lg shadow p-4 flex flex-col h-full">
               <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Exploring the hidden beaches" class="rounded-md mb-4 h-40 w-full object-cover">
               <div class="flex-1 flex flex-col">
-                <span class="text-xs text-gray-500 mb-1">June 2, 2020</span>
+                <p class="text-xs text-gray-500 current-date"></p>
                 <h2 class="blog-title font-bold text-lg mb-2">Exploring the hidden beaches</h2>
                 <p class="text-gray-600 mb-4 flex-1">Discover the most beautiful and secluded beaches around the world.</p>
                 <a href="#" class="text-orange-500 font-semibold hover:underline mt-auto">Read More &gt;</a>
               </div>
             </div>
             <!-- Post 3 (full width) -->
-            <div class="blog-card bg-gray-50 rounded-lg shadow p-4 flex flex-col h-full md:col-span-2">
+            <div class="blog-card rounded-lg shadow p-4 flex flex-col h-full md:col-span-2">
               <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=800&q=80" alt="A journey through the mountains" class="rounded-md mb-4 h-60 w-full object-cover">
               <div class="flex-1 flex flex-col">
-                <span class="text-xs text-gray-500 mb-1">July 19, 2020</span>
+                <p class="text-xs text-gray-500 current-date"></p>
                 <h2 class="blog-title font-bold text-lg mb-2">A journey through the mountains</h2>
                 <p class="text-gray-600 mb-4 flex-1">Experience breathtaking views and adventures in the mountains.</p>
                 <a href="#" class="text-orange-500 font-semibold hover:underline mt-auto">Read More &gt;</a>
               </div>
             </div>
             <!-- Post 4 -->
-            <div class="blog-card bg-gray-50 rounded-lg shadow p-4 flex flex-col h-full">
+            <div class="blog-card rounded-lg shadow p-4 flex flex-col h-full">
               <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="City lights and urban nights" class="rounded-md mb-4 h-40 w-full object-cover">
               <div class="flex-1 flex flex-col">
-                <span class="text-xs text-gray-500 mb-1">August 5, 2020</span>
+                <p class="text-xs text-gray-500 current-date"></p>
                 <h2 class="blog-title font-bold text-lg mb-2">City lights and urban nights</h2>
                 <p class="text-gray-600 mb-4 flex-1">The best cities to visit for nightlife and culture.</p>
                 <a href="#" class="text-orange-500 font-semibold hover:underline mt-auto">Read More &gt;</a>
               </div>
             </div>
             <!-- Post 5 -->
-            <div class="blog-card bg-gray-50 rounded-lg shadow p-4 flex flex-col h-full">
+            <div class="blog-card rounded-lg shadow p-4 flex flex-col h-full">
               <img src="https://images.unsplash.com/photo-1465101178521-c1a9136a3fd9?auto=format&fit=crop&w=400&q=80" alt="Tastes of the world" class="rounded-md mb-4 h-40 w-full object-cover">
               <div class="flex-1 flex flex-col">
-                <span class="text-xs text-gray-500 mb-1">September 10, 2020</span>
+                <p class="text-xs text-gray-500 current-date"></p>
                 <h2 class="blog-title font-bold text-lg mb-2">Tastes of the world</h2>
                 <p class="text-gray-600 mb-4 flex-1">A culinary adventure through different countries and cultures.</p>
                 <a href="#" class="text-orange-500 font-semibold hover:underline mt-auto">Read More &gt;</a>
               </div>
             </div>
             <!-- Post 6 (full width) -->
-            <div class="blog-card bg-gray-50 rounded-lg shadow p-4 flex flex-col h-full md:col-span-2">
+            <div class="blog-card rounded-lg shadow p-4 flex flex-col h-full md:col-span-2">
               <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=800&q=80" alt="Wildlife encounters" class="rounded-md mb-4 h-60 w-full object-cover">
               <div class="flex-1 flex flex-col">
-                <span class="text-xs text-gray-500 mb-1">October 22, 2020</span>
+                 <p class="text-xs text-gray-500 current-date"></p>
                 <h2 class="blog-title font-bold text-lg mb-2">Wildlife encounters</h2>
                 <p class="text-gray-600 mb-4 flex-1">Get close to nature and meet amazing animals in their habitats.</p>
                 <a href="#" class="text-orange-500 font-semibold hover:underline mt-auto">Read More &gt;</a>
               </div>
             </div>
             <!-- Post 7 -->
-            <div class="blog-card bg-gray-50 rounded-lg shadow p-4 flex flex-col h-full">
+            <div class="blog-card rounded-lg shadow p-4 flex flex-col h-full">
               <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="Historic landmarks" class="rounded-md mb-4 h-40 w-full object-cover">
               <div class="flex-1 flex flex-col">
-                <span class="text-xs text-gray-500 mb-1">November 15, 2020</span>
+                 <p class="text-xs text-gray-500 current-date"></p>
                 <h2 class="blog-title font-bold text-lg mb-2">Historic landmarks</h2>
                 <p class="text-gray-600 mb-4 flex-1">Step back in time and explore the world's most iconic landmarks.</p>
                 <a href="#" class="text-orange-500 font-semibold hover:underline mt-auto">Read More &gt;</a>
               </div>
             </div>
             <!-- Post 8 -->
-            <div class="blog-card bg-gray-50 rounded-lg shadow p-4 flex flex-col h-full">
+            <div class="blog-card rounded-lg shadow p-4 flex flex-col h-full">
               <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Winter wonderlands" class="rounded-md mb-4 h-40 w-full object-cover">
               <div class="flex-1 flex flex-col">
-                <span class="text-xs text-gray-500 mb-1">December 1, 2020</span>
+                 <p class="text-xs text-gray-500 current-date"></p>
                 <h2 class="blog-title font-bold text-lg mb-2">Winter wonderlands</h2>
                 <p class="text-gray-600 mb-4 flex-1">Travel to the most magical winter destinations.</p>
                 <a href="#" class="text-orange-500 font-semibold hover:underline mt-auto">Read More &gt;</a>
@@ -198,7 +232,7 @@
   </script>
   <!-- Add this script before </body> -->
   <script>
-    document.getElementById('blog-search').addEventListener('input', function() {
+    document.getElementById('blog-search').addEventListener('input', function () {
       const search = this.value.trim().toLowerCase();
       let firstVisible = null;
       const grid = document.querySelector('.grid'); // Select your blog grid container
@@ -218,6 +252,19 @@
           }, 300); // Wait for grid scroll before scrolling to card
         }, 100);
       }
+    });
+  </script>
+  <!-- Replace this line wherever you want the current date to appear: -->
+  <p class="text-xs text-gray-500 current-date"></p>
+
+  <!-- Add this script before the closing </body> tag (only once per page): -->
+  <script>
+    document.querySelectorAll('.current-date').forEach(el => {
+      el.textContent = new Date().toLocaleDateString(undefined, {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+      });
     });
   </script>
 </body>
