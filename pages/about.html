@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | TripTreasure</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/svg+xml" href="../assets/logos/TripTreasurelogo.png" />
+</head>
+
+<body class="bg-gray-50 flex flex-col min-h-screen">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow">
+    <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center space-x-2">
+         <img src="../assets/logos/TripTreasurelogo.png" alt="TripTreasure Logo" class="h-24 w-24" />
+        <span class="text-2xl font-bold text-orange-500">TripTreasure</span>
+      </div>
+      <div class="hidden md:flex space-x-8">
+        <a href="index.html" class="text-orange-500 font-medium hover:underline">Home</a>
+        <a href="about.html" class="text-orange-500 font-medium hover:underline">About</a>
+        <a href="blog.html" class="text-orange-500 font-medium hover:underline">Blog</a>
+        <a href="contact.html" class="text-orange-500 font-medium hover:underline">Contact</a>
+      </div>
+      <!-- Hamburger -->
+      <button id="menu-btn" class="md:hidden text-orange-500 focus:outline-none">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 bg-white">
+      <a href="index.html" class="block py-2 text-orange-500 font-medium hover:underline">Home</a>
+      <a href="about.html" class="block py-2 text-orange-500 font-medium hover:underline">About</a>
+      <a href="blog.html" class="block py-2 text-orange-500 font-medium hover:underline">Blog</a>
+      <a href="contact.html" class="block py-2 text-orange-500 font-medium hover:underline">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="flex-1 container mx-auto px-4 py-8">
+    <div class="flex flex-col lg:flex-row gap-8">
+      <!-- Sidebar -->
+      <aside class="hidden lg:block w-full max-w-xs">
+        <div class="bg-white rounded-xl shadow p-6 mb-6">
+          <h3 class="text-lg font-semibold mb-2">Latest News</h3>
+          <div class="mb-4">
+            <h4 class="font-bold">New Website Launched</h4>
+            <p class="text-xs text-gray-500">July 1st, 2014</p>
+            <p class="text-gray-600">2014 sees the redesign of our website. Take a look around and let us know what you think.<br><a href="#" class="text-orange-500 hover:underline">Read more</a>
+            </p>
+          </div>
+          <div>
+            <h4 class="font-bold">New Website Launched</h4>
+            <p class="text-xs text-gray-500">July 1st, 2014</p>
+            <p class="text-gray-600">2014 sees the redesign of our website. Take a look around and let us know what you think.<br><a href="#" class="text-orange-500 hover:underline">Read more</a>
+            </p>
+          </div>
+        </div>
+        <div class="bg-white rounded-xl shadow p-6 mb-6">
+          <h3 class="text-lg font-semibold mb-2">Useful Links</h3>
+          <ul class="list-disc list-inside text-gray-600">
+            <li><a href="#" class="text-orange-500 hover:underline">link 1</a></li>
+            <li><a href="#" class="text-orange-500 hover:underline">link 2</a></li>
+            <li><a href="#" class="text-orange-500 hover:underline">link 3</a></li>
+            <li><a href="#" class="text-orange-500 hover:underline">link 4</a></li>
+          </ul>
+        </div>
+        <!-- Search box styled like the sidebar -->
+        <div class="bg-white rounded-xl shadow p-6 mb-8">
+          <h3 class="text-lg font-semibold mb-2">Search</h3>
+          <form method="post" action="#" class="flex" onsubmit="return false;">
+            <input id="blog-search" class="flex-1 px-3 py-2 border rounded-l focus:outline-none focus:ring-2 focus:ring-orange-400" type="text" name="search_field" placeholder="Enter keywords..." />
+            <button type="submit" class="bg-orange-500 text-white px-4 py-2 rounded-r hover:bg-orange-600">Search</button>
+          </form>
+        </div>
+      </aside>
+      <!-- Content -->
+      <section class="flex-1">
+        <div class="bg-white rounded-xl shadow p-8">
+          <h1 class="text-3xl font-bold text-orange-500 mb-6">About TripTreasure</h1>
+          <p class="text-gray-700 text-lg mb-4">
+            Welcome to TripTreasure! We are passionate travelers dedicated to sharing the best travel tips, guides, and inspiration for your next adventure.
+          </p>
+          <p class="text-gray-600 mb-4">
+            Our mission is to help you discover amazing destinations, plan unforgettable trips, and connect with a community of fellow explorers. Whether you’re a seasoned globetrotter or planning your first journey, TripTreasure is here to support you every step of the way.
+          </p>
+          <p class="text-gray-600 mb-4">
+            On our blog, you’ll find destination guides, travel planning resources, and stories from around the world. We believe travel is for everyone and strive to make it accessible, enjoyable, and memorable.
+          </p>
+          <div class="mt-8 text-center">
+            <span class="inline-block bg-orange-100 text-orange-500 px-6 py-2 rounded-full font-semibold">
+              Thank you for being part of our journey!
+            </span>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t mt-8">
+    <div class="container mx-auto px-4 py-4 text-center text-gray-500 text-sm">
+      &copy; 2025 TripTreasure. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- Hamburger Menu Script -->
+  <script>
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
+  <script>
+  document.getElementById('blog-search').addEventListener('input', function() {
+    const search = this.value.trim().toLowerCase();
+    let firstVisible = null;
+    const grid = document.querySelector('.grid'); // Select your blog grid container
+    document.querySelectorAll('.blog-card').forEach(card => {
+      const title = card.querySelector('.blog-title').textContent.trim().toLowerCase();
+      const desc = card.querySelector('p').textContent.trim().toLowerCase();
+      const match = (title.includes(search) || desc.includes(search));
+      card.style.display = match ? '' : 'none';
+      if (match && !firstVisible) firstVisible = card;
+    });
+    // Always scroll the grid into view, then scroll to the first result
+    if (search && firstVisible) {
+      setTimeout(() => {
+        grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        setTimeout(() => {
+          firstVisible.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 300); // Wait for grid scroll before scrolling to card
+      }, 100);
+    }
+  });
+</script>
+</body>
+
+</html>
