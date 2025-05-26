@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <script data-noptimize="1" data-cfasync="false" data-wpfc-render="false">
+   <script data-noptimize="1" data-cfasync="false" data-wpfc-render="false">
     (function () {
       var script = document.createElement("script");
       script.async = 1;
@@ -12,7 +12,7 @@
   </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact | TripTreasure</title>
+  <title>About | TripTreasure</title>
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="icon" type="image/svg+xml" href="./assets/logos/TripTreasurelogo.png" />
@@ -27,12 +27,11 @@
          <img src="./assets/logos/TripTreasurelogo.png" alt="TripTreasure Logo" class="h-24 w-24" />
         <span class="text-2xl font-bold text-orange-500">TripTreasure</span>
       </div>
-      <!-- Desktop Navbar Dropdown -->
       <div class="hidden md:flex space-x-8">
         <a href="index.html" class="text-orange-500 font-medium hover:underline">Home</a>
         <a href="about.html" class="text-orange-500 font-medium hover:underline">About</a>
         <!-- Blog links dropdown -->
-        <div class="relative group">
+         <div class="relative group">
           <button class="text-orange-500 font-medium hover:underline flex items-center focus:outline-none">
             Blog links
             <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -57,7 +56,7 @@
       </button>
     </div>
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 bg-white">
+      <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 bg-white">
       <a href="index.html" class="block py-2 text-orange-500 font-medium hover:underline">Home</a>
       <a href="about.html" class="block py-2 text-orange-500 font-medium hover:underline">About</a>
       <!-- Blog links dropdown for mobile -->
@@ -82,53 +81,48 @@
 
   <!-- Main Content -->
   <main class="flex-1 container mx-auto px-4 py-8">
-    <div class="max-w-2xl mx-auto bg-white rounded-xl shadow p-8">
-      <h1 class="text-3xl font-bold text-orange-500 mb-6 text-center">Contact</h1>
-      <form action="#" method="post" class="space-y-6">
-        <div>
-          <label class="block text-gray-700 font-medium mb-2" for="name">Name</label>
-          <input class="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-orange-400" type="text" id="name" name="your_name" required>
+    <div class="flex flex-col lg:flex-row gap-8">
+      <!-- Sidebar -->
+      <aside class="hidden lg:block w-full max-w-xs">
+        <div class="bg-white rounded-xl shadow p-6 mb-6">
+          <h3 class="text-lg font-semibold mb-2">Latest News</h3>
+          <div class="mb-4">
+            <h4 class="font-bold">New Website Launched</h4>
+            <p class="text-xs text-gray-500 current-date"></p>
+            <p class="text-gray-600">from 2025 i have redesign this website. Take a look around and let us know what you think.<br><a href="contact.html" class="text-orange-500 hover:underline">Read more</a>
+            </p>
+          </div>
+          <div>
+            <h4 class="font-bold">New bonus systems Launched</h4>
+            <p class="text-xs text-gray-500 current-date"></p>
+            <p class="text-gray-600">New bonus systems on booking websites – check it out! It can give you some extra holiday bonus.
+  <br>
+  <a href="https://trip.tp.st/dh27TdDJ" class="text-orange-500 hover:underline">Read more</a>
+</p>
+          </div>
         </div>
-        <div>
-          <label class="block text-gray-700 font-medium mb-2" for="email">Email Address</label>
-          <input class="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-orange-400" type="email" id="email" name="your_email" required>
+        <div class="bg-white rounded-xl shadow p-6 mb-6">
+          <h3 class="text-lg font-semibold mb-2">Quick Links</h3>
+           <ul class="list-disc list-inside text-gray-600">
+            <li><a href="https://trip.tp.st/AvTHHTSA" class="text-orange-500 hover:underline">cheap Flichts</a></li>
+            <li><a href="https://trip.tp.st/w3PUOH2Y" class="text-orange-500 hover:underline">cheap Hotels</a></li>
+            <li><a href="https://trip.tp.st/tLV7CT8O" class="text-orange-500 hover:underline">Car Rentals</a></li>
+            <li><a href="https://trip.tp.st/aPFPoA6K" class="text-orange-500 hover:underline">Vacation Packages</a></li>
+            <li><a href="https://yesim.tp.st/73UknDtT" target="_blank" rel="noopener" class="text-orange-500 hover:underline">eSIM solutions</a></li>
+          </ul>
         </div>
-        <div>
-          <label class="block text-gray-700 font-medium mb-2" for="message">Message</label>
-          <textarea class="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-orange-400" id="message" name="your_enquiry" rows="6" required></textarea>
+        <!-- styled like the sidebar --> 
+        <div class="bg-white rounded-xl shadow p-6 mb-8">
+          <h3 class="text-lg font-semibold mb-2">Search</h3>
+          <form method="post" action="#" class="flex" onsubmit="return false;">
+            <input id="blog-search" class="flex-1 px-3 py-2 border rounded-l focus:outline-none focus:ring-2 focus:ring-orange-400" type="text" name="search_field" placeholder="Enter keywords..." />
+            <button type="submit" class="bg-orange-500 text-white px-4 py-2 rounded-r hover:bg-orange-600">Search</button>
+          </form>
         </div>
-        <div class="text-center">
-          <button type="submit" class="bg-orange-500 text-white font-semibold px-6 py-2 rounded hover:bg-orange-600 transition">Send</button>
-        </div>
-      </form>
-      <p class="text-xs text-gray-400 mt-6 text-center">* This form does not send emails. Add backend logic to enable submissions.</p>
-
-      <!-- Contact Links Section -->
-      <div class="mt-10">
-        <h2 class="text-xl font-semibold text-orange-500 mb-4 text-center">Contact Partners</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <a href="https://yesim.app/contacts/" target="_blank" class="flex items-center p-4 bg-gray-50 rounded-lg shadow hover:bg-orange-50 transition">
-            <img src="https://yesim.app/favicon.ico" alt="Yesim" class="w-8 h-8 mr-3 rounded-full">
-            <span class="font-medium text-gray-700">Yesim Contact</span>
-          </a>
-          <a href="https://nl.trip.com/pages/service/?locale=nl-NL&curr=EUR" target="_blank" class="flex items-center p-4 bg-gray-50 rounded-lg shadow hover:bg-orange-50 transition">
-            <img src="https://dimg04.c-ctrip.com/images/100k0h0000008v7lqD6C8.png" alt="Trip.com" class="w-8 h-8 mr-3 rounded-full">
-            <span class="font-medium text-gray-700">Trip.com Service</span>
-          </a>
-          <a href="https://secure.booking.com/help?label=gen173rf-1BCAEoggI46AdIM1gDaKkBiAEBmAEcuAEXyAEM2AEB6AEBiAIBogIVYXBwLnRyYXZlbHBheW91dHMuY29tqAIDuAKXxM7BBsACAdICJGM5OTE2MGU3LTA1ZTktNGNiMi1hM2I2LTM2NDg3OWYxODdlMNgCBeACAQ&sid=7328c3c58728927d4e0941d57433a722&aid=304142" target="_blank" class="flex items-center p-4 bg-gray-50 rounded-lg shadow hover:bg-orange-50 transition">
-            <img src="https://www.booking.com/favicon.ico" alt="Booking.com" class="w-8 h-8 mr-3 rounded-full">
-            <span class="font-medium text-gray-700">Booking.com Help</span>
-          </a>
-          <a href="https://www.agoda.com/nl-nl/info/contact.html?ds=nDGty0Ri6NsDgNzs#htl-cs-1" target="_blank" class="flex items-center p-4 bg-gray-50 rounded-lg shadow hover:bg-orange-50 transition">
-            <img src="https://cdn6.agoda.net/images/kite-js/logo/agoda/color-default.svg" alt="Agoda" class="w-8 h-8 mr-3 rounded-full bg-white p-1">
-            <span class="font-medium text-gray-700">Agoda Contact</span>
-          </a>
-          <a href="https://tripadvisor.mediaroom.com/US-contact-us" target="_blank" class="flex items-center p-4 bg-gray-50 rounded-lg shadow hover:bg-orange-50 transition">
-            <img src="https://static.tacdn.com/favicon.ico" alt="Tripadvisor" class="w-8 h-8 mr-3 rounded-full">
-            <span class="font-medium text-gray-700">Tripadvisor Contact</span>
-          </a>
-        </div>
-      </div>
+      </aside>
+      <!-- Content -->
+      
+       <!-- end Content -->
     </div>
   </main>
 
@@ -147,6 +141,29 @@
       menu.classList.toggle('hidden');
     });
   </script>
+  <script>
+  document.getElementById('blog-search').addEventListener('input', function() {
+    const search = this.value.trim().toLowerCase();
+    let firstVisible = null;
+    const grid = document.querySelector('.grid'); // Select your blog grid container
+    document.querySelectorAll('.blog-card').forEach(card => {
+      const title = card.querySelector('.blog-title').textContent.trim().toLowerCase();
+      const desc = card.querySelector('p').textContent.trim().toLowerCase();
+      const match = (title.includes(search) || desc.includes(search));
+      card.style.display = match ? '' : 'none';
+      if (match && !firstVisible) firstVisible = card;
+    });
+    // Always scroll the grid into view, then scroll to the first result
+    if (search && firstVisible) {
+      setTimeout(() => {
+        grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        setTimeout(() => {
+          firstVisible.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 300); // Wait for grid scroll before scrolling to card
+      }, 100);
+    }
+  });
+</script>
 </body>
 
 </html>
