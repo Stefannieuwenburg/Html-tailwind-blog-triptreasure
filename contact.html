@@ -83,28 +83,19 @@
   <!-- Main Content -->
   <main class="flex-1 container mx-auto px-4 py-8">
     <div class="max-w-2xl mx-auto bg-white rounded-xl shadow p-8">
-      <h1 class="text-3xl font-bold text-orange-500 mb-6 text-center">Contact</h1>
-      <form action="#" method="post" class="space-y-6">
-        <div>
-          <label class="block text-gray-700 font-medium mb-2" for="name">Name</label>
-          <input class="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-orange-400" type="text" id="name" name="your_name" required>
-        </div>
-        <div>
-          <label class="block text-gray-700 font-medium mb-2" for="email">Email Address</label>
-          <input class="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-orange-400" type="email" id="email" name="your_email" required>
-        </div>
-        <div>
-          <label class="block text-gray-700 font-medium mb-2" for="message">Message</label>
-          <textarea class="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-orange-400" id="message" name="your_enquiry" rows="6" required></textarea>
-        </div>
-        <div class="text-center">
-          <button type="submit" class="bg-orange-500 text-white font-semibold px-6 py-2 rounded hover:bg-orange-600 transition">Send</button>
-        </div>
-      </form>
-      <p class="text-xs text-gray-400 mt-6 text-center">* This form does not send emails. Add backend logic to enable submissions.</p>
-
-      <!-- Contact Links Section -->
-       <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="S.Nieuwenburg" data-description="Support me on Buy me a coffee!" data-message="" data-color="#FF813F" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
+      <h1 class="text-xl font-bold text-orange-500 mb-6 text-center">Contact</h1>
+      <div class="flex flex-col items-center gap-6">
+        <!-- Owner Contact Button -->
+        <a href="mailto:nieuwenburg.stefan@gmail.com?subject=Contact%20from%20TripTreasure"
+           class="flex items-center gap-2 bg-orange-500 text-white font-semibold px-6 py-3 rounded-lg shadow hover:bg-orange-600 transition text-lg">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M16 12H8m8 0a4 4 0 11-8 0 4 4 0 018 0zm-8 0V8a4 4 0 118 0v4"></path>
+          </svg>
+          Contact the Owner
+        </a>
+        <p class="text-gray-500 text-center">Click the button to send an email directly to the site owner.</p>
+      </div>
+      <!-- Contact Partners Section -->
       <div class="mt-10">
         <h2 class="text-xl font-semibold text-orange-500 mb-4 text-center">Contact Partners</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -113,11 +104,12 @@
             <span class="font-medium text-gray-700">Yesim Contact</span>
           </a>
           <a href="https://nl.trip.com/pages/service/?locale=nl-NL&curr=EUR" target="_blank" class="flex items-center p-4 bg-gray-50 rounded-lg shadow hover:bg-orange-50 transition">
-            <img src="https://dimg04.c-ctrip.com/images/100k0h0000008v7lqD6C8.png" alt="Trip.com" class="w-8 h-8 mr-3 rounded-full">
+            <img src="https://www.trip.com/favicon.ico" alt="Trip.com" class="w-8 h-8 mr-3 rounded-full">
             <span class="font-medium text-gray-700">Trip.com Service</span>
           </a>
           <a href="https://secure.booking.com/help?label=gen173rf-1BCAEoggI46AdIM1gDaKkBiAEBmAEcuAEXyAEM2AEB6AEBiAIBogIVYXBwLnRyYXZlbHBheW91dHMuY29tqAIDuAKXxM7BBsACAdICJGM5OTE2MGU3LTA1ZTktNGNiMi1hM2I2LTM2NDg3OWYxODdlMNgCBeACAQ&sid=7328c3c58728927d4e0941d57433a722&aid=304142" target="_blank" class="flex items-center p-4 bg-gray-50 rounded-lg shadow hover:bg-orange-50 transition">
-            <img src="https://www.booking.com/favicon.ico" alt="Booking.com" class="w-8 h-8 mr-3 rounded-full">
+             <img src="https://img.icons8.com/color/48/booking.png" alt="Booking.com Icon"class="w-8 h-8 mr-3 rounded-full">
+
             <span class="font-medium text-gray-700">Booking.com Help</span>
           </a>
           <a href="https://www.agoda.com/nl-nl/info/contact.html?ds=nDGty0Ri6NsDgNzs#htl-cs-1" target="_blank" class="flex items-center p-4 bg-gray-50 rounded-lg shadow hover:bg-orange-50 transition">
